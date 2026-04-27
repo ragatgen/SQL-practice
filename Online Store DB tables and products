@@ -1,3 +1,4 @@
+```bash
 -- ==========================================
 -- CREATE ONLINE SUPERMARKET DATABASE
 -- ==========================================
@@ -97,3 +98,5 @@ VALUES
 
 SELECT * FROM products
 ORDER BY category, product_name;
+
+```
