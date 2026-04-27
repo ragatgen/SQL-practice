@@ -1,0 +1,99 @@
+-- ==========================================
+-- CREATE ONLINE SUPERMARKET DATABASE
+-- ==========================================
+
+CREATE DATABASE OnlineStore;
+
+-- Connect to OnlineStore before running below
+-- In pgAdmin open OnlineStore and run next section
+
+-- ==========================================
+-- CREATE TABLE
+-- ==========================================
+
+CREATE TABLE products (
+    id SERIAL PRIMARY KEY,
+    category VARCHAR(100),
+    product_name VARCHAR(150),
+    price NUMERIC(10,2)
+);
+
+-- ==========================================
+-- INSERT PRODUCTS
+-- ==========================================
+
+INSERT INTO products (category, product_name, price)
+VALUES
+('Fruits', 'Apple', 0.50),
+('Fruits', 'Banana', 0.30),
+('Fruits', 'Orange', 0.60),
+('Fruits', 'Grapes', 2.50),
+('Fruits', 'Pineapple', 3.20),
+('Fruits', 'Watermelon', 4.00),
+
+('Vegetables', 'Tomato', 0.80),
+('Vegetables', 'Potato', 0.40),
+('Vegetables', 'Onion', 0.35),
+('Vegetables', 'Carrot', 0.45),
+('Vegetables', 'Lettuce', 1.20),
+('Vegetables', 'Broccoli', 1.90),
+
+('Dairy', 'Milk 1L', 1.50),
+('Dairy', 'Cheese', 3.75),
+('Dairy', 'Butter', 2.20),
+('Dairy', 'Yogurt', 1.10),
+('Dairy', 'Cream', 2.40),
+
+('Bakery', 'White Bread', 1.25),
+('Bakery', 'Whole Wheat Bread', 1.50),
+('Bakery', 'Croissant', 0.95),
+('Bakery', 'Bagel', 1.10),
+('Bakery', 'Cake Slice', 2.80),
+
+('Meat', 'Chicken Breast 1kg', 6.50),
+('Meat', 'Ground Beef 1kg', 8.90),
+('Meat', 'Pork Chops 1kg', 7.25),
+('Meat', 'Sausage Pack', 4.80),
+
+('Seafood', 'Salmon 1kg', 12.50),
+('Seafood', 'Shrimp 1kg', 10.20),
+('Seafood', 'Tuna Steak', 7.40),
+
+('Beverages', 'Orange Juice 1L', 2.10),
+('Beverages', 'Apple Juice 1L', 2.00),
+('Beverages', 'Cola 2L', 1.85),
+('Beverages', 'Bottled Water 1L', 0.90),
+('Beverages', 'Coffee 500g', 5.40),
+
+('Snacks', 'Potato Chips', 1.75),
+('Snacks', 'Cookies', 2.40),
+('Snacks', 'Chocolate Bar', 1.20),
+('Snacks', 'Popcorn', 1.65),
+
+('Pantry', 'Rice 1kg', 1.80),
+('Pantry', 'Beans 1kg', 2.10),
+('Pantry', 'Pasta 500g', 1.35),
+('Pantry', 'Sugar 1kg', 1.25),
+('Pantry', 'Salt 1kg', 0.70),
+('Pantry', 'Olive Oil 1L', 6.80),
+
+('Frozen', 'Frozen Pizza', 4.50),
+('Frozen', 'Ice Cream', 3.80),
+('Frozen', 'Frozen Fries', 2.90),
+
+('Household', 'Dish Soap', 2.30),
+('Household', 'Laundry Detergent', 7.90),
+('Household', 'Toilet Paper Pack', 5.50),
+('Household', 'Paper Towels', 3.20),
+
+('Personal Care', 'Shampoo', 4.20),
+('Personal Care', 'Toothpaste', 2.60),
+('Personal Care', 'Soap Bar', 1.10),
+('Personal Care', 'Deodorant', 3.75);
+
+-- ==========================================
+-- VIEW PRODUCTS
+-- ==========================================
+
+SELECT * FROM products
+ORDER BY category, product_name;
